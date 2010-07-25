@@ -1,0 +1,6 @@
+consumer_key: 'abc123def456ghi789' # consumer key from your Twitter app
+consumer_secret: 'abc123def456ghi789jkl012mno345pqr678' # consumer secret from your Twitter app
+access_token: '12345678-abc123def456ghi789jkl012mno345pqr678' # access token from your Twitter app
+access_token_secret: 'abc123def456ghi789' # access token secret from your Twitter app
+bot_name: 'scotfail' # Username of Twitter bot - used to prevent self-retweeting.
+search_query: '#scotfail' # The Twitter search term
