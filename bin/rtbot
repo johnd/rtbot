@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# RTBot
+
+require 'rubygems'
+require "#{File.dirname(__FILE__)}/../lib/rtbot"
+require 'getoptlong'
+
+opts = GetoptLong.new(['--config', '-c', GetoptLong::REQUIRED_ARGUMENT])
+
+yaml_file_path = nil
+
+opts.each do | opt, arg |
+  if opt == '--config'
+    if arg == ''
+      puts "Config File arugment is required."
+      exit 0
+    else
+      yaml_file_path = arg
+    end
+  end
+end
+
+rtbot = RTBot.new(yaml_file_path)
+rtbot.run!
+exit
