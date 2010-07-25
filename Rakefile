@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rtbot"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A simple Twitter RTing bot.}
+    gem.description = %Q{Provides an rtbot script which you can configure to make a very simply Twitter retweeting bot.}
     gem.email = "john@semantici.st"
     gem.homepage = "http://github.com/johnd/rtbot"
     gem.authors = ["John Daniels"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency "twitter", ">= 0"
+    gem.add_dependency "activesupport", ">= 2"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
