@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rtbot}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["John Daniels"]
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
      "bin/rtbot",
      "config.yml.example",
      "lib/rtbot.rb",
+     "rtbot.gemspec",
      "test/helper.rb",
      "test/test_rtbot.rb"
   ]
