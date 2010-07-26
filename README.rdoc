@@ -15,6 +15,8 @@ Command:
 
  rtbot --config=/home/john/bots/scotfail.yml
 
+The process doesn't daemonise itself - it's intended to be called repeatedly from cron.
+
 scotfail.yml:
 
  consumer_key: 'actualconsumerkey' # consumer key from your Twitter app
