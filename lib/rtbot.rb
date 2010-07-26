@@ -5,8 +5,8 @@ class RTBot
   
   def initialize(yaml_file_path)
     @config = YAML.load(File.read(yaml_file_path))
-    @config['last_id_path'] = "#{File.basename(yaml_file_path, File.extname(yaml_file_path))}.last_id" unless @config['last_id_path']
-    @config['log_path'] = "#{File.basename(yaml_file_path, File.extname(yaml_file_path))}.log" unless @config['log_path']
+    @config['last_id_path'] = File.dirname(yaml_file_path) + "/" + File.basename(yaml_file_path, File.extname(yaml_file_path)) + ".last_id" unless @config['last_id_path']
+    @config['log_path'] = File.dirname(yaml_file_path) + "/" + File.basename(yaml_file_path, File.extname(yaml_file_path)) + ".log" unless @config['log_path']
     
     if File.exists?(@config['last_id_path'])
       @last_read_id = File.new(@config['last_id_path'], 'r').gets
